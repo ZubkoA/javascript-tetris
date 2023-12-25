@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", sans-serif;
+  background: linear-gradient(90deg, blue, aqua);
+}
+header {
+  max-width: 90vw;
+  padding-top: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 80px;
+}
+
+main {
+  /* height: 65vh; */
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.tetris {
+  background-color: rgb(127, 127, 229);
+  padding: 0.5vh;
+  border-radius: 0.5vh;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  grid-template-rows: repeat(20, auto);
+}
+.tetris div {
+  height: min(4vh, 7vw);
+  width: min(4vh, 7vw);
+  background-color: rgba(158, 136, 136, 0.68);
+  border-radius: 0.3vh;
+  box-shadow: inset 2px 2px 2px rgba(121, 95, 95, 0.288),
+    inset -2px -2px 2px rgba(88, 94, 132, 0.288);
+}
+
+.tetris .O {
+  background: yellow;
+  box-shadow: 4px 4px 4px #000 inset;
+}
+.tetris .L {
+  background: green;
+  box-shadow: 4px 4px 4px #000 inset;
+}
+.tetris .I {
+  background: red;
+  box-shadow: 4px 4px 4px #000 inset;
+}
+.tetris .S {
+  background: violet;
+  box-shadow: 4px 4px 4px #000 inset;
+}
+.tetris .Z {
+  background: rgb(55, 107, 139);
+  box-shadow: 4px 4px 4px #000 inset;
+}
+.tetris .J {
+  background: orange;
+  box-shadow: 4px 4px 4px #000 inset;
+}
+.tetris .T {
+  background: olivedrab;
+  box-shadow: 4px 4px 4px #000 inset;
+}
+
+/* .tetris .color {
+  background: #000;
+} */
+
+.btn {
+  border-radius: 5vh;
+  border: 4px solid blue;
+
+  background-color: inherit;
+  color: #222;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: transparent;
+  transform: scale(1.05);
+  border: 4px solid blue;
+}
+.btn:focus {
+  outline-color: transparent;
+  outline-style: solid;
+  box-shadow: 0 0 0 4px #2111b0;
+}
+
+.score {
+  margin-top: auto;
+  /* align-self: flex-start; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 20px;
+}
+.score input {
+  width: 150px;
+  border-radius: 5vh;
+  border: 4px solid blue;
+  color: #222;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 10px 14px;
+}
