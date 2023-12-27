@@ -57,38 +57,16 @@ main {
     inset -2px -2px 2px rgba(88, 94, 132, 0.288);
 }
 
-.tetris .O {
+.tetris .O,
+.tetris .L,
+.tetris .I,
+.tetris .S,
+.tetris .Z,
+.tetris .J,
+.tetris .T {
   background: yellow;
   box-shadow: 4px 4px 4px #000 inset;
 }
-.tetris .L {
-  background: green;
-  box-shadow: 4px 4px 4px #000 inset;
-}
-.tetris .I {
-  background: red;
-  box-shadow: 4px 4px 4px #000 inset;
-}
-.tetris .S {
-  background: violet;
-  box-shadow: 4px 4px 4px #000 inset;
-}
-.tetris .Z {
-  background: rgb(55, 107, 139);
-  box-shadow: 4px 4px 4px #000 inset;
-}
-.tetris .J {
-  background: orange;
-  box-shadow: 4px 4px 4px #000 inset;
-}
-.tetris .T {
-  background: olivedrab;
-  box-shadow: 4px 4px 4px #000 inset;
-}
-
-/* .tetris .color {
-  background: #000;
-} */
 
 .btn {
   border-radius: 5vh;
@@ -123,12 +101,13 @@ main {
   justify-content: start;
   gap: 20px;
 }
-.score input {
+.current-score {
   width: 150px;
   border-radius: 5vh;
   border: 4px solid blue;
-  color: #222;
+  color: #000;
   font-size: 14px;
   font-family: inherit;
   padding: 10px 14px;
+  text-align: center;
 }

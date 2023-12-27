@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tetris</title>
+    <link
+      rel="shortcut icon"
+      href="image/favicon_io/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
+    <!-- <script defer src="/main.js" type="module"></script> -->
   </head>
   <body>
     <header>
@@ -16,12 +22,12 @@
         <div class="tetris"></div>
       </section>
       <section class="score">
-        <input type="number" />
-        <p>💯 Score: <span>20</span></p>
-        <p>🥇 Highscore: <span>0</span></p>
+        <p class="current-score">0</p>
+        <p>💯 Score: <span id="score">0</span></p>
+        <p>🥇 Highscore: <span id="high-score">0</span></p>
       </section>
     </main>
-    <!-- <script src="main.js"></script> -->
-    <script src="mainTraining.js"></script>
+    <script type="module" src="./main.js"></script>
+    <!-- <script src="mainTraining.js"></script> -->
   </body>
 </html>
