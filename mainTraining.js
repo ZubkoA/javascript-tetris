@@ -291,8 +291,6 @@ function onKeyDown(event) {
       break;
   }
   draw();
-  console.log(event.key);
-  console.log(playing);
 }
 
 function dropTetrominoDown() {
@@ -434,12 +432,12 @@ function stopLoop() {
 }
 
 function rotateTetromino() {
-  const { matrix } = tetromino;
-  const oldMatrix = matrix;
-  const rotatedMatrix = rotateMatrix(matrix);
-  matrix = rotatedMatrix;
+  const oldMatrix = tetromino.matrix;
+  const rotatedMatrix = rotateMatrix(tetromino.matrix);
+  console.log(rotatedMatrix);
+  tetromino.matrix = rotatedMatrix;
   if (isValid()) {
-    matrix = oldMatrix;
+    tetromino.matrix = oldMatrix;
   }
 }
 //формула перегортання
