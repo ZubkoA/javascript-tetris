@@ -21,7 +21,6 @@ export function randomColor(A = 1) {
 
 export function generateTetromino(nameTetro) {
   const matrixTetro = TETROMINOES[nameTetro];
-  // console.log(nameTetro);
 
   const columnTetro = Math.floor(
     PLAYFIELD_COLUMNS / 2 - matrixTetro.length / 2

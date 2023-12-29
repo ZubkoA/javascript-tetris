@@ -23,7 +23,7 @@ header {
   padding-right: 15px;
   /* margin-left: auto;
   margin-right: auto; */
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   display: flex;
   flex-direction: row;
@@ -105,7 +105,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 145px;
   background: inherit;
   border-radius: 4px;
 }
