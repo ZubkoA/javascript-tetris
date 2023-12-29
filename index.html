@@ -18,12 +18,15 @@
       <button class="btn">Play again!</button>
     </header>
     <main>
-      <section>
+      <section class="faild">
         <div class="tetris"></div>
+        <div class="message">
+          <h2>Game over</h2>
+        </div>
       </section>
       <section class="achievement">
         <div class="next-figure">
-          <h2>next figure</h2>
+          <h3>next figure</h3>
           <div class="svg-container">
             <img class="img" src="./image/svg/tetris-O.svg" alt="figure" />
             <!-- <svg width="100" height="100">
@@ -32,24 +35,28 @@
           </div>
         </div>
         <div class="buttons">
-          <button id="ArrowUp" class="btn" type="button">
-            <span>🔄</span>
-          </button>
-          <button id="ArrowLeft" class="btn" type="button">
-            <span>◀</span>
-          </button>
-          <button id="ArrowRight" class="btn" type="button">
-            <span></span>▶
-          </button>
-          <button id="ArrowDown" class="btn" type="button">
-            <span>🔽</span>
-          </button>
-          <button id="Pause" class="btn" type="button">
-            <span>P</span>
-          </button>
-          <button id="DoubleArrowDown" class="btn" type="button">
-            <span>⏬</span>
-          </button>
+          <div class="main-btn">
+            <button id="ArrowUp" class="btn" type="button">
+              <span>🔄</span>
+            </button>
+            <button id="ArrowLeft" class="btn" type="button">
+              <span>◀</span>
+            </button>
+            <button id="ArrowRight" class="btn" type="button">
+              <span></span>▶
+            </button>
+            <button id="ArrowDown" class="btn" type="button">
+              <span>🔽</span>
+            </button>
+          </div>
+          <div class="secondary-btn">
+            <button id="Pause" class="btn" type="button">
+              <span>P</span>
+            </button>
+            <button id="DoubleArrowDown" class="btn" type="button">
+              <span>⏬</span>
+            </button>
+          </div>
         </div>
         <div class="achievement-scores">
           <p class="current-score">0</p>
@@ -59,9 +66,6 @@
           </p>
         </div>
       </section>
-      <div class="message">
-        <h3>Game over</h3>
-      </div>
     </main>
     <!-- <script type="module" src="./main.js"></script> -->
     <script src="mainTraining.js"></script>

@@ -506,7 +506,7 @@ function dropRowsAbove(rowDelete) {
 
 const displayMessage = function (alert) {
   message.textContent = alert;
-  message.style.display = "block";
+  message.style.display = "flex";
 };
 
 btnUp.addEventListener("click", function () {
