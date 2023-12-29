@@ -38,8 +38,8 @@ export const TETROMINOES = {
 };
 
 //initial state
-export const init = function () {
-  scores = 0;
-  playing = true;
-  currentScore.textContent = 0;
-};
+// export const init = function () {
+//   scores = 0;
+//   playing = true;
+//   currentScore.textContent = 0;
+// };

@@ -85,7 +85,7 @@ function draw() {
 
   drawPlayField();
   drawTetromino();
-  console.table(playfield);
+  // console.table(playfield);
 }
 
 document.addEventListener("keydown", onKeyDown);
@@ -160,7 +160,7 @@ function placeTetromino() {
         tetromino.name;
     }
   }
-  console.log(tetromino.name);
+
   const filledRows = findFilledRows();
 
   removeFillRows(filledRows);
@@ -174,6 +174,7 @@ function placeTetromino() {
 function moveDown() {
   moveTetrominoDown();
   draw();
+  stopLoop();
   startLoop();
 }
 
@@ -182,9 +183,9 @@ function startLoop() {
     () => (requestId = requestAnimationFrame(moveDown)),
     700
   );
+  console.log(requestId);
 }
 startLoop();
-
 function stopLoop() {
   cancelAnimationFrame(requestId);
   timeoutId = clearTimeout(timeoutId);
