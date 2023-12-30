@@ -162,24 +162,24 @@ main {
   height: 60px; */
   align-self: center;
 }
-#ArrowUp {
+#Rotate {
   padding: 0;
   grid-column-start: 2;
   width: 65px;
   height: 65px;
 }
-#ArrowLeft {
+#ArrowLeft-btn {
   grid-column-start: 1;
   padding: 0;
   width: 60px;
   height: 60px;
 }
-#ArrowRight {
+#ArrowRight-btn {
   grid-column-start: 3;
   width: 60px;
   height: 60px;
 }
-#ArrowDown {
+#ArrowDown-btn {
   grid-column-start: 2;
   padding: 0;
   width: 60px;

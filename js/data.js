@@ -37,9 +37,33 @@ export const TETROMINOES = {
   ],
 };
 
-//initial state
-// export const init = function () {
-//   scores = 0;
-//   playing = true;
-//   currentScore.textContent = 0;
-// };
+export const figures = [
+  {
+    name: "O",
+    src: "./image/svg/tetris-O.svg",
+  },
+  {
+    name: "L",
+    src: "./image/svg/tetris-L.svg",
+  },
+  {
+    name: "I",
+    src: "./image/svg/tetris-I.svg",
+  },
+  {
+    name: "S",
+    src: "./image/svg/tetris-S.svg",
+  },
+  {
+    name: "Z",
+    src: "./image/svg/tetris-Z.svg",
+  },
+  {
+    name: "J",
+    src: "./image/svg/tetris-J.svg",
+  },
+  {
+    name: "T",
+    src: "./image/svg/tetris-T.svg",
+  },
+];

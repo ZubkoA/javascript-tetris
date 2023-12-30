@@ -95,10 +95,11 @@ const image = document.querySelector(".img");
 //створюємо змінні
 let playfield,
   tetromino,
-  nextTetro,
+  nextTetro = randomFigure(),
   scores = 0,
-  yourScores = 0,
-  highScores = 0,
+  yourScores = JSON.parse(localStorage.getItem("previousScores")),
+  // yourScores = 0,
+  highScores = JSON.parse(localStorage.getItem("highScores")),
   timeoutId,
   requestId,
   cells,
@@ -118,6 +119,7 @@ function init() {
   message.style.display = "none";
   cells = document.querySelectorAll(".tetris div");
   scores = 0;
+  bestScore.innerText = highScores;
 }
 
 document.addEventListener("keydown", onKeyDown);
@@ -160,9 +162,8 @@ function generatePlayfield() {
 
 //опис де і яка фігура має зявитись
 function generateTetromino() {
-  createNextFigure();
-
   const nameTetro = nextTetro;
+  createNextFigure();
 
   //матриця фігури, напри2х2, чи3х3
   const matrixTetro = TETROMINOES[nameTetro];
@@ -263,17 +264,27 @@ function togglePausedGame() {
   }
 }
 
+// function startGame() {
+//   playing = !playing;
+//   if (playing) {
+//     init();
+//   }
+// }
+
 function onKeyDown(event) {
   if (event.key === "p") {
     togglePausedGame();
   }
-  if (isPaused) {
+  if (event.key === "Escape") {
+    startGame();
+  }
+  if (isPaused || playing) {
     return;
   }
   switch (event.key) {
-    case "Escape":
-      playGame();
-      break;
+    // case "Escape":
+    //   init();
+    //   break;
     case " ":
       dropTetrominoDown();
       break;
@@ -300,14 +311,6 @@ function dropTetrominoDown() {
   }
   tetromino.row--;
 }
-
-// function playGame() {
-//   if (!playing) {
-
-//   } else {
-//     stopLoop();
-//   }
-// }
 
 function moveTetrominoDown() {
   tetromino.row += 1;
@@ -399,7 +402,7 @@ function moveDown() {
     gameOver();
   }
 }
-console.log(playing);
+
 function gameOver() {
   stopLoop();
   yourScores = scores;
@@ -412,13 +415,13 @@ function gameOver() {
 
 function checkHighScore() {
   if (scores > highScores) {
-    highScores = scores;
-    bestScore.textContent = highScores;
-  } else {
-    highScores;
+    // bestScore.textContent = highScores;
+    localStorage.setItem("highScores", JSON.stringify(scores));
+    // } else {
+    //   highScores;
   }
 }
-
+console.log(highScores);
 function startLoop() {
   timeoutId = setTimeout(
     () => (requestId = requestAnimationFrame(moveDown)),
@@ -434,7 +437,7 @@ function stopLoop() {
 function rotateTetromino() {
   const oldMatrix = tetromino.matrix;
   const rotatedMatrix = rotateMatrix(tetromino.matrix);
-  console.log(rotatedMatrix);
+
   tetromino.matrix = rotatedMatrix;
   if (isValid()) {
     tetromino.matrix = oldMatrix;
